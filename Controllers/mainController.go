@@ -10,6 +10,8 @@ type MainController struct {
 
 func (this *MainController) Get() {
 	//this.Ctx.Output.Body([]byte("start" + beegae.AppName))
-	this.TplNames = "index.tpl"
+	//this.TplNames = "index.tpl"
+	this.TplNames = "login.html"
+
 	//this.Ctx.Output.Body([]byte("end"))
 }

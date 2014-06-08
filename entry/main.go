@@ -9,9 +9,14 @@ import (
 
 func init() {
 	beegae.Router("/", &Controllers.MainController{})
-	beegae.Router("/user", &Controllers.UserController{})
-	beegae.Router("/auth/login", &Controllers.UserController{})
-	beegae.Router("/:id:int", &Controllers.UserController{})
+	beegae.Router("/index", &Controllers.UserController{})
+
+	//beegae.SetStaticPath("/css", "views/css")
+	//beegae.SetStaticPath("/js", "views/js")
+	//beegae.SetStaticPath("/img", "views/img")
+	//beegae.SetStaticPath("/font", "views/font")
+	//beegae.SetStaticPath("/fonts", "views/fonts")
+	//beegae.SetStaticPath("/images", "views/images")
 
 	err := beegae.BuildTemplate(beegae.ViewsPath)
 	if err != nil {
